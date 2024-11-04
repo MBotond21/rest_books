@@ -48,11 +48,6 @@ export class BooksService {
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
-    // this.findOne(id).title = updateBookDto.title ?? this.findOne(id).title;
-    // this.findOne(id).author = updateBookDto.author ?? this.findOne(id).author;
-    // this.findOne(id).isbn = updateBookDto.isbn ?? this.findOne(id).isbn;
-    // this.findOne(id).publishYear = updateBookDto.publishYear ?? this.findOne(id).publishYear;
-    // this.findOne(id).reserved = updateBookDto.reserved ?? this.findOne(id).reserved;
     let book = this.findOne(id);
     Object.assign(book, updateBookDto);
     return `Book #${id} was updated successfully`;
