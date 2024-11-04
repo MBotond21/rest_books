@@ -50,7 +50,7 @@ export class BooksService {
   update(id: number, updateBookDto: UpdateBookDto) {
     let book = this.findOne(id);
     Object.assign(book, updateBookDto);
-    return `Book #${id} was updated successfully`;
+    return book;
   }
 
   remove(id: number) {
